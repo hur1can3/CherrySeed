@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{2EE25DC0-D03C-4433-97E3-0704139C63F9}</ProjectGuid>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="coverlet.msbuild" Version="2.6.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
+    <PackageReference Include="SpecFlow" Version="2.1.0" />
+    <PackageReference Include="SpecFlow.MsTest" Version="2.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.0" />
+    <PackageReference Include="FluentAssertions" Version="5.6.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CherrySeed\CherrySeed.csproj" />
+    <ProjectReference Include="..\..\src\DataProviders.Csv\DataProviders.Csv.csproj" />
+    <ProjectReference Include="..\..\src\DataProviders.Gherkin\DataProviders.Gherkin.csproj" />
+    <ProjectReference Include="..\..\src\DataProviders.SpecFlow\DataProviders.SpecFlow.csproj" />
+    <ProjectReference Include="..\..\src\Repositories.Ef\Repositories.Ef.csproj" />
+    <ProjectReference Include="..\..\src\Repositories.EfCore\Repositories.EfCore.csproj" />
+  </ItemGroup>
+</Project>

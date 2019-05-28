@@ -13,7 +13,7 @@ namespace CherrySeed.TypeTransformations
 
         public object Transform(Type type, string str)
         {
-            if(string.IsNullOrEmpty(str))
+            if (string.IsNullOrEmpty(str))
                 return null;
 
             if (str == _emptyStringMarker)

@@ -14,7 +14,7 @@ namespace CherrySeed.Configuration.Exceptions
         public MissingConfigurationException(string configurationKey)
             : base(string.Format("Configuration '{0}' is missing. Set with class CherrySeedConfiguration the required settings.", configurationKey), null)
         {
-            
+
         }
     }
 }

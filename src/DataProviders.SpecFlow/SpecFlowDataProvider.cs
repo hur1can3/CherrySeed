@@ -28,7 +28,7 @@ namespace CherrySeed.DataProviders.SpecFlow
                     EntityName = entityName,
                     Objects = table.Rows
                     .Select(r => r.ToDictionary(
-                        instance => instance.Key, 
+                        instance => instance.Key,
                         instance => instance.Value)
                         ).ToList()
                 }

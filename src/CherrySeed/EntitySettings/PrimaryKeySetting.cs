@@ -12,7 +12,7 @@ namespace CherrySeed.EntitySettings
 
         public PrimaryKeySetting()
         {
-            
+
         }
 
         //public PrimaryKeySetting(List<string> primaryKeyNames)

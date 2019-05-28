@@ -37,12 +37,12 @@ namespace CherrySeed
             _objectListTransformation = new ObjectListTransformation(
                 new ObjectTransformation.ObjectTransformation(
                     new PropertyHandler(
-                        _idMappingProvider, 
+                        _idMappingProvider,
                         new TypeTransformationProvider(_configuration.TypeTransformations)
                     )
                 )
             );
-            
+
             foreach (var entitySetting in _configuration.EntitySettings)
             {
                 _entityMetadataDict.Add(entitySetting.EntityType, new EntityMetadata

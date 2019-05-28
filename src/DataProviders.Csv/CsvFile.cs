@@ -3,7 +3,6 @@ using System.IO;
 using System.Text;
 using CherrySeed.EntityDataProvider;
 using CsvHelper;
-using CsvHelper.Configuration;
 
 namespace CherrySeed.DataProviders.Csv
 {
@@ -34,16 +33,14 @@ namespace CherrySeed.DataProviders.Csv
         private List<Dictionary<string, string>> ReadDataFromFile()
         {
             var textReader = File.OpenText(_filePath);
-            var csvReader = new CsvReader(textReader, new CsvConfiguration
-            {
-                Delimiter = _delimiter,
-                Encoding = _encoding
-            });
-            
+            var csvReader = new CsvReader(textReader);
+
             var entityDicts = new List<Dictionary<string, string>>();
+            csvReader.Read();
+            csvReader.ReadHeader();
+            var fieldNames = csvReader.Context.HeaderRecord;
             while (csvReader.Read())
             {
-                var fieldNames = csvReader.FieldHeaders;
 
                 // read one row
                 var entityDict = new Dictionary<string, string>();

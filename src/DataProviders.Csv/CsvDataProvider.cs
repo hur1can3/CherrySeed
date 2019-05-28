@@ -33,7 +33,7 @@ namespace CherrySeed.DataProviders.Csv
 
             foreach (var csvFilePath in _configuration.CsvFilePaths)
             {
-                if(!File.Exists(csvFilePath))
+                if (!File.Exists(csvFilePath))
                     throw new InvalidOperationException($"File not found {csvFilePath}");
             }
 

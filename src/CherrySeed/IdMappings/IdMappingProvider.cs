@@ -15,7 +15,7 @@ namespace CherrySeed.IdMappings
 
         public void SetIdMapping(Type objectType, string providerId, object repositoryId)
         {
-            var idMapping = new IdMappingDescription {ProviderId = providerId, RepositoryId = repositoryId};
+            var idMapping = new IdMappingDescription { ProviderId = providerId, RepositoryId = repositoryId };
 
             if (_idMappingDict.ContainsKey(objectType))
             {
@@ -27,7 +27,7 @@ namespace CherrySeed.IdMappings
                 {
                     idMapping
                 });
-            } 
+            }
         }
 
         public object GetRepositoryId(Type objectType, string providerId)

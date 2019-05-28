@@ -23,7 +23,7 @@ namespace CherrySeed.ObjectTransformation.PropertyHandlers
 
             if (isPrimaryKey && entitySetting.IdGeneration.IsDatabaseGenerationEnabled)
                 return false;
-                
+
             return true;
         }
 

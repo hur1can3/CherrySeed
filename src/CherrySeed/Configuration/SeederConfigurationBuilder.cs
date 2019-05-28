@@ -57,13 +57,13 @@ namespace CherrySeed.Configuration
         {
             var entitySettings = _entitySettingBuilders.Values
                 .Select(b => b.Build(
-                    _defaultRepository, 
+                    _defaultRepository,
                     _defaultIdGeneration,
                     _defaultPrimaryKeyNames))
                 .ToList();
 
             if (!string.IsNullOrEmpty(_emptyStringMarker))
-            { 
+            {
                 if (!(_typeTransformations[typeof(string)] is StringTransformation))
                 {
                     throw new ConfigurationException("EmptyString marker can not be set, because the string transformation logic is overriden from you.", null);
@@ -71,7 +71,7 @@ namespace CherrySeed.Configuration
 
                 _typeTransformations[typeof(string)] = new StringTransformation(_emptyStringMarker);
             }
-            
+
             var configuration = new SeederConfiguration
             {
                 AfterSaveAction = _afterSaveAction,

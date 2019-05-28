@@ -12,7 +12,7 @@ namespace CherrySeed.EntitySettings
 
     public class ReferenceSetting<T> : ReferenceSetting
     {
-        public ReferenceSetting(Expression<Func<T, object>> referenceMember, 
+        public ReferenceSetting(Expression<Func<T, object>> referenceMember,
             Type referenceType)
         {
             ReferenceName = ReflectionUtil.GetMemberName(referenceMember);
